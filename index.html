@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!-- Defines HTML5 doctype -->
+<html>
+<head>
+    <!-- 
+  Author: Parveen Parveen
+  Date: July 27, 2023
+  Description: Smoothie order website - JS Assignment
+-->
+    <title>Smoothie Order Form</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Custom CSS -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for page -->
+        <form id="smoothieForm"> <!-- Form for smoothie orders -->
+            <h2>Order Your Smoothie</h2> <!-- Form title -->
+
+            <!-- Flavor selection -->
+            <div class="form-group"> 
+                <label for="flavor">Flavor:</label>
+                <select id="flavor" class="form-control">
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Mixed Berries">Mixed Berries</option>
+                </select>
+            </div>
+
+            <!-- Size selection -->
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" class="form-control">
+                    <option value="3">Small</option>
+                    <option value="4">Medium</option>
+                    <option value="5">Large</option>
+                </select>
+            </div>
+
+            <!-- Additions selection -->
+            <div class="form-group">
+                <label>Additions ($1 each):</label><br/>
+                <div class="row">
+                    <div class="col">
+                        <input type="checkbox" id="strawberries" value="Strawberries"> Strawberries<br/>
+                        <input type="checkbox" id="protein" value="Protein Powder"> Protein Powder<br/>
+                        <input type="checkbox" id="spinach" value="Spinach"> Spinach<br/>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="peanut" value="Peanut"> Peanut<br/>
+                        <input type="checkbox" id="chocolate" value="Chocolate"> Chocolate<br/>
+                        <input type="checkbox" id="almonds" value="Almonds"> Almonds<br/>
+                    </div>
+                    <div class="col">
+                        <input type="checkbox" id="vanilla" value="Vanilla"> Vanilla<br/>
+                        <input type="checkbox" id="oats" value="Oats"> Oats<br/>
+                        <input type="checkbox" id="cinnamon" value="Cinnamon"> Cinnamon<br/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Textarea for additional information -->
+            <div class="form-group">
+                <label for="additionalInfo">Additional Info:</label>
+                <textarea id="additionalInfo" class="form-control" rows="3"></textarea>
+            </div>
+
+            <!-- Display for total price -->
+            <div class="form-group">
+                <label>Total Price: $</label><span id="totalPrice">3</span>
+            </div>
+
+            <!-- Order and reset button -->
+            <button type="button" class="btn btn-success" id="orderButton">Order</button>
+            <button type="reset" class="btn btn-danger">Clear</button>
+        </form>
+
+        <!-- Order summary section -->
+        <div id="orderSummary" style="display: none;">
+            <h2>Your Order Summary</h2>
+            <p id="summary"></p>
+            <h3><strong>Total: </strong><span id="totalDisplay"></span></h3>
+
+            <!-- Back button -->
+            <button type="button" class="btn btn-primary" id="backButton">Back</button>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body::before {
+    content: ""; /* Generate content */
+    background: url('smoothiebg.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Image fully cover the area */
+    filter: brightness(50%); /* Apply filter for brightness */
+    position: absolute; /* Positioning scheme */
+    top: 0; /* Distance from the top */
+    left: 0; /* Distance from the left */
+    height: 100%; /* Element's height */
+    width: 100%; /* Element's width */
+    z-index: -1; /* Stack order */
+}
+
+body {
+    position: relative; /* Positioning scheme */
+    background-color: #F8F9FA; /* Background color */
+}
+
+.container {
+    margin-top: 50px; /* Margin from the top */
+    background-color: #F8F9FA; /* Background color */
+    padding: 30px; /* Padding inside container */
+    border-radius: 0; /* Roundness of border */
+}
+
+h2 {
+    color: #28A745; /* Text color */
+}
